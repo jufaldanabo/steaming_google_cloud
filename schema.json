@@ -1,0 +1,147 @@
+[
+    {
+        "name": "conversation_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "contact_point",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "client",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "branch_office",
+        "type": "DATE",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "user_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "voice_recording_file_name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "transcription",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "transcription_probability",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "polarity_prediction",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "polarity_probability",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "polarity_version",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "subjetivity_prediction",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "subjetivity_probability",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "subjetivity_version",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "certainity",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "sentence",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+
+    {
+        "name": "empowerment",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "sentence",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+
+    {
+        "name": "recognition",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "sentence",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "fair_treatment",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "sentence",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "shared_values",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "sentence",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "enjoy",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "sentence",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    }
+
+]
