@@ -39,7 +39,7 @@ import pytz
 
 PROJECT_ID = os.getenv('GCP_PROJECT')
 BQ_DATASET = 'talkeydataset'
-BQ_TABLE = 'Table_Talkey'
+BQ_TABLE = 'Table_talkey'
 ERROR_TOPIC = 'projects/%s/topics/%s' % (PROJECT_ID, 'streaming_error_topic')
 SUCCESS_TOPIC = 'projects/%s/topics/%s' % (PROJECT_ID, 'streaming_success_topic')
 DB = firestore.Client()
