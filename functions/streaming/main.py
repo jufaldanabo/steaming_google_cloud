@@ -48,10 +48,11 @@ PS = pubsub_v1.PublisherClient()
 BQ = bigquery.Client()
 
 
+
 def streaming(data, context):
     '''This function is executed whenever a file is added to Cloud Storage'''
     bucket_name = data['bucket']
-    file_name = data['name']
+    file_name = "tk_client/" + data['name']
     db_ref = DB.document(u'streaming_files/%s' % file_name)
     if _was_already_ingested(db_ref):
         _handle_duplication(db_ref)
