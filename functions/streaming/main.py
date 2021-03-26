@@ -39,7 +39,7 @@ import pytz
 
 PROJECT_ID = os.getenv('GCP_PROJECT')
 BQ_DATASET = 'talkeydataset'
-BQ_TABLE = 'tk_client'
+BQ_TABLE = 'Tk_client'
 ERROR_TOPIC = 'projects/%s/topics/%s' % (PROJECT_ID, 'streaming_error_topic')
 SUCCESS_TOPIC = 'projects/%s/topics/%s' % (PROJECT_ID, 'streaming_success_topic')
 DB = firestore.Client()
@@ -52,7 +52,7 @@ BQ = bigquery.Client()
 def streaming(data, context):
     '''This function is executed whenever a file is added to Cloud Storage'''
     bucket_name = data['bucket']
-    file_name = "tk_client/" + data['name']
+    file_name = data['name']
     db_ref = DB.document(u'streaming_files/%s' % file_name)
     if _was_already_ingested(db_ref):
         _handle_duplication(db_ref)
