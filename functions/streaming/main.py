@@ -49,7 +49,7 @@ BQ = bigquery.Client()
 
 
 
-def streaming(data, context):
+def streaming_tkclient(data, context):
     '''This function is executed whenever a file is added to Cloud Storage'''
     bucket_name = data['bucket']
     file_name = data['name']
