@@ -39,7 +39,7 @@ import pytz
 
 PROJECT_ID = os.getenv('GCP_PROJECT')
 BQ_DATASET = 'talkeydataset'
-BQ_TABLE = 'Tk_client'
+BQ_TABLE = 'Tk_qx'
 ERROR_TOPIC = 'projects/%s/topics/%s' % (PROJECT_ID, 'streaming_error_topic')
 SUCCESS_TOPIC = 'projects/%s/topics/%s' % (PROJECT_ID, 'streaming_success_topic')
 DB = firestore.Client()
@@ -49,7 +49,7 @@ BQ = bigquery.Client()
 
 
 
-def streaming_tkclient(data, context):
+def streaming_tkqx(data, context):
     '''This function is executed whenever a file is added to Cloud Storage'''
     bucket_name = data['bucket']
     file_name = data['name']
